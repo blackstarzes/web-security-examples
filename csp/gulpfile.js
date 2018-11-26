@@ -4,8 +4,8 @@ const crypto = require("crypto");
 
 function serve() {
     // Create javascript and hash
-    const alert = "alert('hello')";
-    const alertEval = "eval('alert(\`hello\`)')";
+    const alert = "alert('SRI allows this script to execute')";
+    const alertEval = "eval('alert(\`unsafe-eval stops this script from executing\`)')";
 
     let server = http.createServer(function(request, response) {
         let code = 200;
